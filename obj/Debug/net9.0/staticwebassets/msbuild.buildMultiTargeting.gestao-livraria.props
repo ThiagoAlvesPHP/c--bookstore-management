@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/gestao-livraria.props" />
+</Project>
