@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gestao-livraria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2eb3ca6141876282e6238911eac3029c882070e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1cbb707f2f95594773d5dc9b0672ac2e95513bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("gestao-livraria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gestao-livraria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

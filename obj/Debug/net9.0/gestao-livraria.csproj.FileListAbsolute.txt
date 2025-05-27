@@ -58,3 +58,4 @@
 /Users/thiagodossantosallves/Desktop/C#/gestao-livraria/obj/Debug/net9.0/gestao-livraria.pdb
 /Users/thiagodossantosallves/Desktop/C#/gestao-livraria/obj/Debug/net9.0/gestao-livraria.genruntimeconfig.cache
 /Users/thiagodossantosallves/Desktop/C#/gestao-livraria/obj/Debug/net9.0/ref/gestao-livraria.dll
+/Users/thiagodossantosallves/Desktop/C#/gestao-livraria/obj/Debug/net9.0/gestao-livraria.sourcelink.json
