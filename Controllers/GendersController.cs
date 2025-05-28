@@ -1,14 +1,16 @@
 using gestao_livraria.Models;
 using Microsoft.AspNetCore.Mvc;
+
 namespace gestao_livraria.Controllers;
 
-public class UsersController : BaseController<Users>
+public class GendersController : BaseController<Genders>
 {
     // Simulação de um banco de dados em memória
-    private static List<Users> list = new List<Users>([
-        new Users(1, "João Silva"),
-        new Users(2, "Maria Oliveira"),
-        new Users(3, "Carlos Pereira")
+    private static List<Genders> list = new List<Genders>([
+        new Genders(1, "Ficção"),
+        new Genders(2, "Ação"),
+        new Genders(3, "Romance"),
+        new Genders(4, "Drama")
     ]);
 
     /**
@@ -16,7 +18,7 @@ public class UsersController : BaseController<Users>
      * Retorna todos os usuários cadastrados.
      */
     [HttpGet]
-    [ProducesResponseType(typeof(Users), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(Genders), StatusCodes.Status200OK)]
     public override ActionResult GetAll()
     {
         return Ok(list);
@@ -27,7 +29,7 @@ public class UsersController : BaseController<Users>
      * Retorna um usuário específico pelo ID.
      */
     [HttpGet("{id}")]
-    [ProducesResponseType(typeof(Users), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(Genders), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
     public override ActionResult GetById([FromRoute] int id)
     {
@@ -43,10 +45,10 @@ public class UsersController : BaseController<Users>
      * Cria um novo usuário.
      */
     [HttpPost]
-    [ProducesResponseType(typeof(Users), StatusCodes.Status200OK)]
-    public override ActionResult Create(Users find)
+    [ProducesResponseType(typeof(Genders), StatusCodes.Status200OK)]
+    public override ActionResult Create(Genders find)
     {
-        find = new Users(list.Count + 1, find.Name);
+        find = new Genders(list.Count + 1, find.Title);
         list.Add(find);
         return CreatedAtAction(nameof(GetById), new { id = find.Id }, find);
     }
@@ -56,15 +58,15 @@ public class UsersController : BaseController<Users>
      * Atualiza um usuário existente.
      */
     [HttpPut("{id}")]
-    [ProducesResponseType(typeof(Users), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(Genders), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
-    public override IActionResult Update([FromRoute] int id, Users find)
+    public override IActionResult Update([FromRoute] int id, Genders find)
     {
         var existingFind = list.Find(u => u.Id == id);
         if (existingFind == null)
             return NotFound(message);
 
-        existingFind.Name = find.Name;
+        existingFind.Title = find.Title;
         return Ok(existingFind);
     }
 

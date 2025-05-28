@@ -6,10 +6,10 @@ public class Books
     public string? Title { get; set; }
     public string? Author { get; set; }
     public string? Gender { get; set; }
-    public decimal Price { get; set; }
+    public double Price { get; set; }
     public int QuantityStock { get; set; }
 
-    public Books(string? title, string? author, string? gender, decimal price, int quantitystock)
+    public Books(string? title, string? author, string? gender, double price, int quantitystock)
     {
         Title = title;
         Author = author;
@@ -18,7 +18,7 @@ public class Books
         QuantityStock = quantitystock;
     }
 
-    internal Books(int id, string? title, string? author, string? gender, decimal price, int quantitystock)
+    internal Books(int id, string? title, string? author, string? gender, double price, int quantitystock)
     {
         Id = id;
         Title = title;
